@@ -15,7 +15,7 @@ async function run() {
 		//console.log(JSON.stringify(resp));
 		console.log(resp.data);
 		core.setOutput('versions', resp.data.versions);
-	} catch (error) {
+	} catch (error: any) {
 		core.setFailed(error.message);
 	}
 }
