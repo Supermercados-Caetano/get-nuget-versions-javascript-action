@@ -6,9 +6,10 @@ type PackageResponse = {
 };
 async function run() {
 	try {
-		const url = 'https://nuget.pkg.github.com/Supermercados-Caetano/download/smcaetano.pdv.core/index.json';//  core.getInput('id');
-		const username = 'GuilhermeSmc';
-		const password = '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';
+		const id = core.getInput('id');
+		const url = `https://nuget.pkg.github.com/Supermercados-Caetano/download/${id.toLowerCase()}/index.json`;//  core.getInput('id');
+		const username = core.getInput('username');
+		const password = core.getInput('password');
 
 		const resp = await axios.get<PackageResponse>(url, { headers: { 'Authorization': 'Basic ' + Buffer.from(username + ':' + password).toString('base64') } });
 		//console.log(JSON.stringify(resp));
