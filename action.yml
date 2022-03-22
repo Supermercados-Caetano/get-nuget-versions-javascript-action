@@ -1,0 +1,21 @@
+name: 'get-nuget-version'
+description: 'Get package version from a package source'
+inputs:
+  id:
+    description: 'Id of the package'
+    required: true
+    default: null
+  username:
+    description: 'Username'
+    required: false
+    default: null
+  password:
+    description: 'Password'
+    required: false
+    default: null
+outputs:
+  versions:
+    description: 'Version array of the package'
+runs:
+  using: 'node16'
+  main: 'index.js'
