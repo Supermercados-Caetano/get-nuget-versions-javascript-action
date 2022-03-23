@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    runs-on: [self-hosted, ubuntu-latest, windows-latest, macos-latest]
+    runs-on: self-hosted
     steps:
     
     - uses: actions/checkout@main
