@@ -11,8 +11,7 @@ jobs:
     steps:
     
     - uses: actions/checkout@main
-    - name: 'Test'
-      uses: ./
+    - uses: ./
       with:
         id: 'SMCaetano.Pdv.Core'
         username: ${{secrets.NUGET_USUARIO}}
