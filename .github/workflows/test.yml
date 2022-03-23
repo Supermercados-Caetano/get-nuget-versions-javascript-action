@@ -1,0 +1,18 @@
+on:
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - uses: actions/checkout@main
+    - name: 'Test'
+      uses: ./
+      with:
+        id: 'SMCaetano.Pdv.ENF'
+        username: ${{secrets.NUGET_USUARIO}}
+        password: ${{secrets.NUGET_PAT}}
