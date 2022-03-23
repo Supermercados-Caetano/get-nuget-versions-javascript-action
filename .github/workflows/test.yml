@@ -9,8 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
+    - name: 'Test'
       uses: ./
-        with:
-          id: 'SMCaetano.Pdv.ENF'
-          username: ${{secrets.NUGET_USUARIO}}
-          password: ${{secrets.NUGET_PAT}}
+      with:
+        id: 'SMCaetano.Pdv.ENF'
+        username: ${{secrets.NUGET_USUARIO}}
+        password: ${{secrets.NUGET_PAT}}
