@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc src/main.ts && node src/main.js",
     "package": "ncc build --source-map",
-    "build": "tsc"
+    "build": "tsc -p tsconfig.build.json"
   },
   "keywords": [],
   "author": "",
