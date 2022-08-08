@@ -7,8 +7,8 @@ type PackageResponse = {
 async function run() {
 	const username = core.getInput('username');
 	const password = core.getInput('password');
-	// const username = "GuilhermeSmc";
-	// const password = "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";
+	// const username = "";
+	// const password = "";
 
 
 	if (username?.length === 0 || password?.length === 0) {
