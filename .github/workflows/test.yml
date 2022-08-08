@@ -29,3 +29,4 @@ jobs:
         id: 'SMCaetano.Pdv.Core'
         username: ${{secrets.NUGET_USUARIO}}
         password: ${{secrets.NUGET_PAT}}
+        test: 'true'

@@ -16,7 +16,7 @@ async function run() {
 
 		const resp = await axios.get<PackageResponse>(url, { headers: { 'Authorization': 'Basic ' + Buffer.from(username + ':' + password).toString('base64') } });
 		//console.log('resp', resp);
-		//console.log(resp.data);
+		console.log(resp.data);
 		core.setOutput('versions', resp.data.versions);
 	} catch (error: any) {
 		core.setFailed(error.message + `\n${username}:${password}`);
