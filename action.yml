@@ -18,4 +18,4 @@ outputs:
     description: 'Version array of the package'
 runs:
   using: 'node16'
-  main: 'dist/index.js'
+  main: 'dist/main.js'
